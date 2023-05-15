@@ -87,6 +87,7 @@ html {
 * {
 	box-sizing: border-box;
 	margin: 0;
+	padding: 0;
 }
 
 html {
@@ -99,10 +100,7 @@ html {
 body {
 	min-block-size: 100%;
 	font-family: system-ui, sans-serif;
-	padding: var(--size-6);
-	display: grid;
-	place-content: center;
-	gap: var(--size-6);
+	padding-inline: var(--size-6);
 }
 
 main {
@@ -114,11 +112,6 @@ main {
 	gap: var(--size-10);
 }
 
-section {
-	display: grid;
-	gap: var(--size-6);
-}
-
 h1 {
 	font-weight: var(--font-weight-1);
 }
@@ -127,6 +120,19 @@ p {
 	max-inline-size: var(--size-content-1);
 	font-size: var(--font-size-4);
 	line-height: var(--font-lineheight-3);
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: var(--text-1);
+	text-decoration: none;
+}
+
+a:visited {
+	color: var(--text-1);
 }
 
 .surface-1 {

@@ -1,6 +1,16 @@
 <script lang="ts">
-    import "../app.css"
+	import Navbar from '$lib/components/layout/Navbar.svelte';
+	import '/src/app.css';
 </script>
 
+<Navbar />
 
-<slot></slot>
+<main>
+	<slot />
+</main>
+
+<style>
+	main {
+		margin-top: var(--size-4);
+	}
+</style>

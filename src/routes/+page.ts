@@ -11,6 +11,7 @@ export const load: Load = async ({ params }) => {
 	}
 
 	return {
-		characters
+		characters,
+		animationStart: false
 	};
 };

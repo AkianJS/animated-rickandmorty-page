@@ -4,15 +4,15 @@
 	export let character: Character;
 </script>
 
-<li>
+<div>
 	<a href="characters/{character.id}">
 		<img width="250" src={character.image} alt={character.name} />
 		{character.name}
 	</a>
-</li>
+</div>
 
 <style>
-	li {
+	div {
 		text-align: center;
 	}
 

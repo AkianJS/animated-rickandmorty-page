@@ -10,4 +10,4 @@
 
 <SearchCharacter />
 
-<CharacterList characters={data.characters.results} />
+<CharacterList animationStart={data.animationStart} characters={data.characters.results} />

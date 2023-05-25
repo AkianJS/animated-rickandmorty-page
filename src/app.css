@@ -1,12 +1,19 @@
 @import 'open-props/style';
 @import 'open-props/normalize';
+@import 'open-props/masks.edges.min.css';
 @import '@fontsource/raleway/100.css';
 @import '@fontsource/raleway/400.css';
 @import '@fontsource/raleway/700.css';
 
 html {
+	/* core */
+	--primary: var(--teal-8);
+	--secondary: var(--indigo-12);
+	--black: #000;
+	--white: #fff;
+
 	/* light */
-	--brand-light: var(--orange-6);
+	--brand-light: var(--orange-3);
 	--text-1-light: var(--gray-8);
 	--text-2-light: var(--gray-7);
 	--surface-1-light: var(--gray-0);
@@ -17,7 +24,7 @@ html {
 	--shadow-strength-light: 2%;
 
 	/* dark */
-	--brand-dark: var(--orange-3);
+	--brand-dark: var(--orange-6);
 	--text-1-dark: var(--gray-3);
 	--text-2-dark: var(--gray-5);
 	--surface-1-dark: var(--gray-12);
@@ -120,8 +127,6 @@ h1 {
 }
 
 p {
-	max-inline-size: var(--size-content-1);
-	font-size: var(--font-size-4);
 	line-height: var(--font-lineheight-3);
 }
 
@@ -156,4 +161,27 @@ a:visited {
 .surface-4 {
 	background-color: var(--surface-4);
 	color: var(--text-1);
+}
+
+/* Primary and variant doesn't use theme colors */
+.primary {
+	background-color: var(--primary);
+	color: var(--white);
+}
+
+/* Colors that depends on character's status */
+
+.alive {
+	background-color: var(--primary);
+	color: var(--white);
+}
+
+.dead {
+	background-color: var(--red-8);
+	color: var(--white);
+}
+
+.unknown {
+	background-color: var(--gray-8);
+	color: var(--white);
 }

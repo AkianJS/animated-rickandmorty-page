@@ -14,7 +14,7 @@
 	<ul class="character-card-container">
 		{#if animationStart}
 			{#each characters as character, i}
-				<li transition:fly={{ delay: 100 * i, duration: 400, y: 100 }}>
+				<li in:fly={{ delay: 100 * i, duration: 400, y: 100 }}>
 					<CharacterCard {character} />
 				</li>
 			{/each}
@@ -32,7 +32,6 @@
 	.container {
 		width: 100%;
 		max-width: var(--size-xl);
-		margin-bottom: var(--size-8);
 	}
 
 	.character-card-container {

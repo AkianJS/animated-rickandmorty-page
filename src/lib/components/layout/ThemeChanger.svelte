@@ -53,7 +53,7 @@
 		top: 50%;
 		left: 5%;
 		transform: translateY(-50%);
-		color: var(--surface-1);
+		color: var(--surface-2);
 		transition: transform 0.4s;
 	}
 

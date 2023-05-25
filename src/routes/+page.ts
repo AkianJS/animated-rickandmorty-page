@@ -2,8 +2,8 @@ import { getCharacters } from '$lib/api/getCharacters';
 import type { Characters } from '$lib/interface/Character';
 import { error, type Load } from '@sveltejs/kit';
 
-export const load: Load = async ({ params }) => {
-	const page = params.page ?? 1;
+export const load: Load = async ({ url }) => {
+	const page = url.searchParams.get('page') ?? 1;
 	const characters: Characters = await getCharacters(+page);
 
 	if (!characters) {

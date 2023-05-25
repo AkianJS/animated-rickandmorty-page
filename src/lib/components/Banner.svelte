@@ -3,5 +3,5 @@
 </script>
 
 <header>
-	<img src={ramBanner} alt="Banner" />
+	<img loading="eager" width="801" height="295" src={ramBanner} alt="Banner" />
 </header>

@@ -7,7 +7,7 @@
 
 <div class="container">
 	<a href="characters/{character.id}">
-		<img width="250" src={character.image} alt={character.name} />
+		<img loading="eager" width="250" src={character.image} alt={character.name} />
 		<div class="info-container {BACKGROUND_COLOR[character.status]}">
 			<p>
 				Name: {character.name} <br />

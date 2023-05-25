@@ -12,6 +12,7 @@ export const load: Load = async ({ url }) => {
 
 	return {
 		characters,
-		animationStart: false
+		animationStart: false,
+		pageNumber: +page
 	};
 };

@@ -62,7 +62,6 @@
 
 	img {
 		border-radius: var(--radius-4);
-		animation: var(--animation-fade-in);
 	}
 
 	.details-container {

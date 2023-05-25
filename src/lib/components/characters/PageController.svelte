@@ -1,21 +1,9 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import type { Info } from '$lib/interface/Character';
 	import { ArrowBigLeftDash, ArrowBigRightDash } from 'lucide-svelte';
-	import { to_number } from 'svelte/internal';
 
 	export let paginationInfo: Info;
-
-	let pageNumber = getPageNumber();
-
-	/* 
-        Since searchParams returns a string, we need to convert it to a number.
-    */
-	function getPageNumber() {
-		return to_number($page.url.searchParams.get('page')) ?? 1;
-	}
-
-	$: paginationInfo, (pageNumber = getPageNumber());
+	export let pageNumber: number;
 </script>
 
 <div class="container">

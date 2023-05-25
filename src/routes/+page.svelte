@@ -1,2 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import Banner from '$lib/components/Banner.svelte';
+	import SearchCharacter from '$lib/components/SearchCharacter.svelte';
+	import CharacterList from '$lib/components/characters/CharacterList.svelte';
+
+	export let data;
+</script>
+
+<Banner />
+
+<SearchCharacter />
+
+<CharacterList characters={data.characters.results} />

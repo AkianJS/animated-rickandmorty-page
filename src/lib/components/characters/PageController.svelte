@@ -6,12 +6,16 @@
 
 	export let paginationInfo: Info;
 
-	let pageNumber: number;
+	let pageNumber = getPageNumber();
 
 	/* 
         Since searchParams returns a string, we need to convert it to a number.
     */
-	$: paginationInfo, (pageNumber = to_number($page.url.searchParams.get('page')) ?? 1);
+	function getPageNumber() {
+		return to_number($page.url.searchParams.get('page')) ?? 1;
+	}
+
+	$: paginationInfo, (pageNumber = getPageNumber());
 </script>
 
 <div class="container">

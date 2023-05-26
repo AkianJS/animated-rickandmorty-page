@@ -10,8 +10,8 @@
 	}
 </script>
 
-<label>
-	<input type="checkbox" bind:checked={isDarkTheme} on:change={changeTheme} />
+<label for="theme-changer">
+	<input id="theme-changer" type="checkbox" bind:checked={isDarkTheme} on:change={changeTheme} />
 	<span>
 		<i class:light-theme={!isDarkTheme}>
 			{#if isDarkTheme}

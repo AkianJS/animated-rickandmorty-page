@@ -3,7 +3,8 @@
 </script>
 
 <div class="container">
-	<input class="surface-4" type="text" />
+	<label for="searcher" />
+	<input id="searcher" class="surface-4" type="text" />
 	<i>
 		<Search />
 	</i>

@@ -3,8 +3,7 @@
 </script>
 
 <div class="container">
-	<label for="searcher" />
-	<input id="searcher" class="surface-4" type="text" />
+	<input aria-label="Search" class="surface-4" type="text" />
 	<i>
 		<Search />
 	</i>

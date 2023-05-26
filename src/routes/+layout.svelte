@@ -1,6 +1,6 @@
 <script lang="ts">
+	import '../app.postcss';
 	import Navbar from '$lib/components/layout/Navbar.svelte';
-	import '/src/app.css';
 </script>
 
 <Navbar />

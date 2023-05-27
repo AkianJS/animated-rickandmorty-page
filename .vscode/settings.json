@@ -1,6 +1,6 @@
 {
 	"editor.formatOnSave": true,
-	"cssvar.files": ["src/app.css", "./node_modules/open-props/open-props.min.css"],
-	"cssvar.extensions": ["css", "svelte"],
+	"cssvar.files": ["./src/app.postcss", "./node_modules/open-props/open-props.min.css"],
+	"cssvar.extensions": ["css", "svelte", "postcss"],
 	"cssvar.ignore": []
 }

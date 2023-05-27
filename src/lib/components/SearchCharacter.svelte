@@ -1,9 +1,37 @@
 <script lang="ts">
+	import { goto, afterNavigate } from '$app/navigation';
 	import { Search } from 'lucide-svelte';
+	import { onMount } from 'svelte';
+
+	let value = '';
+	let timer: ReturnType<typeof setTimeout>;
+	let inputElement: HTMLInputElement;
+
+	const debounce = (v: string) => {
+		clearTimeout(timer);
+		timer = setTimeout(() => {
+			value = v;
+			goto(`/?name=${v}`);
+		}, 500);
+	};
+
+	onMount(() => {
+		inputElement.focus();
+	});
+
+	afterNavigate(() => {
+		inputElement.focus();
+	});
 </script>
 
 <div class="container">
-	<input aria-label="Search" class="surface-4" type="text" />
+	<input
+		bind:this={inputElement}
+		on:keyup={(event) => debounce(event.currentTarget.value)}
+		aria-label="Search"
+		class="surface-4"
+		type="text"
+	/>
 	<i>
 		<Search />
 	</i>

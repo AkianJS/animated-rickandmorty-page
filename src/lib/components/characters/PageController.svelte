@@ -4,19 +4,26 @@
 
 	export let paginationInfo: Info;
 	export let pageNumber: number;
+	export let findByName: string | null;
 </script>
 
 <div class="container">
 	{#if paginationInfo.prev}
-		<a class="controller arrow-left" href={`?page=${pageNumber - 1}`}
-			><ArrowBigLeftDash /> Previous</a
+		<a
+			class="controller arrow-left"
+			href={`?${findByName ? `name=${findByName}&` : ''}page=${pageNumber - 1}`}
 		>
+			<ArrowBigLeftDash /> Previous
+		</a>
 	{/if}
 
 	{#if paginationInfo.next}
-		<a class="controller arrow-right" href={`?page=${pageNumber + 1}`}
-			>Next <ArrowBigRightDash /></a
+		<a
+			class="controller arrow-right"
+			href={`?${findByName ? `name=${findByName}&` : ''}page=${pageNumber + 1}`}
 		>
+			Next <ArrowBigRightDash />
+		</a>
 	{/if}
 </div>
 

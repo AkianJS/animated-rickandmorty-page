@@ -25,4 +25,10 @@
 
 <CharacterList animationStart={data.animationStart} characters={data.characters.results} />
 
-<PageController pageNumber={data.pageNumber} paginationInfo={data.characters.info} />
+{#if data.pagination}
+	<PageController
+		findByName={data.name}
+		pageNumber={data.pageNumber}
+		paginationInfo={data.characters.info}
+	/>
+{/if}
